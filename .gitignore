@@ -1,0 +1,27 @@
+# SCALE-RM が出力する binary file を除外
+out*.nc
+gpyopt*.nc
+history*.nc
+# 実行時に *.org.nc からコピー・上書きされる作業用初期値（オリジナルの *.org.nc は追跡する）
+init_*.pe??????.nc
+# *.nc
+*.html
+LOG*
+
+# SCALE-RM 実行バイナリ（ビルド成果物。各自の SCALE-RM ビルドからコピー/シンボリックリンクする）
+scale-rm
+scale-rm_init
+sno
+
+# シェルスクリプトは基本除外（ヘルパーのみ例外）
+*.sh
+!check_github.sh
+
+# Python キャッシュ
+__pycache__/
+*.pyc
+
+# 結果 file も除外
+/ICCS_result
+/test_result
+/plt_InitialValue
